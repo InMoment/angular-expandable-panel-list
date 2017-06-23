@@ -58,3 +58,6 @@ typings/
 .env
 
 temp
+dist
+*.ngfactory.ts
+*.ngsummary.json
