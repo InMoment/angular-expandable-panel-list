@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "outDir": "dist",
+    "target": "es5",
+    "module": "commonjs",
+    "baseUrl": ".",
+    "types": [ "node" ],
+    "typeRoots": [ "../node_modules/@types" ],
+    "paths": {
+      "angular-collapsible-panel-list": ["../src/index"]
+    }
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}

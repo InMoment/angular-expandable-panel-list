@@ -11,6 +11,7 @@ var os = require('os');
 var asyncDone = require('async-done');
 var remapIstanbul = require('remap-istanbul/lib/gulpRemapIstanbul');
 var gulpFile = require('gulp-file');
+var shell = require('gulp-shell');
 
 var PATHS = {
   src : 'src/**/*.ts',
@@ -131,6 +132,10 @@ gulp.task('npm', function() {
       .pipe(gulpFile('package.json', JSON.stringify(targetPkgJson, null, 2)))
       .pipe(gulp.dest('dist'));
 });
+
+gulp.task('demo-server', [], shell.task([
+  'webpack-dev-server --port 9090 --config demo/webpack.config.js --inline --progress'
+]));
 
 gulp.task('build', function(done) {
   runSequence('lint', 'ddescribe-iit', 'test', 'clean:build',
