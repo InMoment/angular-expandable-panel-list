@@ -1,0 +1,17 @@
+{
+  "name": "accordion",
+  "version": "1.0.0",
+  "description": "Material Design based Accordion",
+  "author": "Nathaniel Lord",
+  "license": "MIT",
+  "module": "accordion.js",
+  "typings": "accordion.d.ts",
+  "peerDependencies": {
+    "@angular/animations": "^^4.2.3 || ^4.0.0",
+    "@angular/common": "^^4.2.3 || ^4.0.0",
+    "@angular/core": "^^4.2.3 || ^4.0.0",
+    "@angular/material": "^^2.0.0-beta.7 || ^4.0.0",
+    "rxjs": "^^5.4.1 || ^4.0.0",
+    "zone.js": "^^0.8.12 || ^4.0.0"
+  }
+}
