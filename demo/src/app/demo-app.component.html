@@ -1,23 +1,18 @@
-<h1>Angular Collapsible Panel List</h1>
-<collapsible-panel-list>
-  <md-expansion-panel>
-    <md-expansion-panel-header>Section 1</md-expansion-panel-header>
-    <p>Content</p>
-  </md-expansion-panel>
-  <md-expansion-panel>
-    <md-expansion-panel-header>Section 2</md-expansion-panel-header>
-    <p>Content</p>
-  </md-expansion-panel>
-  <md-expansion-panel>
-    <md-expansion-panel-header>Section 3</md-expansion-panel-header>
-    <p>Content</p>
-  </md-expansion-panel>
-  <md-expansion-panel>
-    <md-expansion-panel-header>Section 4</md-expansion-panel-header>
-    <p>Content</p>
-  </md-expansion-panel>
-  <md-expansion-panel>
-    <md-expansion-panel-header>Section 5</md-expansion-panel-header>
-    <p>Content</p>
-  </md-expansion-panel>
-</collapsible-panel-list>
+<h1>Angular Expandable Panel List</h1>
+<expandable-panel-list>
+  <expandable-panel [title]="'Section A'">
+    Content
+  </expandable-panel>
+  <expandable-panel [title]="'Section B'">
+    Content
+  </expandable-panel>
+  <expandable-panel [title]="'Section C'">
+    Content
+  </expandable-panel>
+  <expandable-panel [title]="'Section D'">
+    Content
+  </expandable-panel>
+  <expandable-panel [title]="'Section E'">
+    Content
+  </expandable-panel>
+</expandable-panel-list>

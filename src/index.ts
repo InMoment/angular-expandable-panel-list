@@ -1,1 +1,1 @@
-export * from './lib/collapsible-panel-list.module';
+export * from './lib/expandable-panel-list.module';

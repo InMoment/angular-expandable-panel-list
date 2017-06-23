@@ -5,12 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdExpansionModule } from '@angular/material';
  
 import { DemoAppComponent }  from './demo-app.component';
-import { CollapsiblePanelListModule } from 'angular-collapsible-panel-list';
+import { ExpandablePanelListModule } from 'angular-expandable-panel-list';
  
 @NgModule({
   imports: [
     BrowserModule,
-    CollapsiblePanelListModule,
+    ExpandablePanelListModule,
     BrowserAnimationsModule,
     MdExpansionModule
   ],

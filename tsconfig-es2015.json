@@ -20,7 +20,7 @@
   "angularCompilerOptions": {
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
-    "flatModuleOutFile": "angular-collapsible-panel-list.js",
-    "flatModuleId": "angular-collapsible-panel-list"
+    "flatModuleOutFile": "angular-expandable-panel-list.js",
+    "flatModuleId": "angular-expandable-panel-list"
   }
 }

@@ -96,7 +96,7 @@ gulp.task('ngc', function(cb) {
 
 gulp.task('rollup', function(cb) {
   var executable = path.join(__dirname, platformPath('/node_modules/.bin/rollup'));
-  exec(`${executable} build/angular-collapsible-panel-list.js -c rollup.config.js -o dist/angular-collapsible-panel-list.js`, (e) => {
+  exec(`${executable} build/angular-expandable-panel-list.js -c rollup.config.js -o dist/angular-expandable-panel-list.js`, (e) => {
     if (e)
       console.log(e);
     gulp.src('build/**/!(*.js)')

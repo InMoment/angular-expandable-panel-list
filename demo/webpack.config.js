@@ -49,7 +49,7 @@ var webpackConfig = {
   resolve: {
     extensions: ['.tsx','.ts','.js','.scss','.css','.html'],
     alias: {
-      'angular-collapsible-panel-list': path.resolve(__dirname, '../src/index.ts')
+      'angular-expandable-panel-list': path.resolve(__dirname, '../src/index.ts')
     }
   },
   plugins: [

@@ -2,22 +2,22 @@ import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { CollapsiblePanelListComponent, CollapsiblePanelListModule } from './collapsible-panel-list.module';
+import { ExpandablePanelComponent, ExpandablePanelListModule } from './expandable-panel-list.module';
 
 @Component({
-  template: `<collapsible-panel-list></collapsible-panel-list>`
+  template: `<expandable-panel></expandable-panel>`
 })
 class TestAppComponent {}
 
-describe('CollapsiblePanelComponent', () => {
+describe('ExpandablePanelComponent', () => {
   let hostComponent: TestAppComponent;
   let fixture: ComponentFixture<TestAppComponent>;
-  let component: CollapsiblePanelListComponent;
+  let component: ExpandablePanelComponent;
   let testComponent: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [CollapsiblePanelListModule],
+      imports: [ExpandablePanelListModule],
       declarations: [ TestAppComponent ]
     })
     .compileComponents();
@@ -27,7 +27,7 @@ describe('CollapsiblePanelComponent', () => {
     fixture = TestBed.createComponent(TestAppComponent);
     hostComponent = fixture.componentInstance;
     fixture.detectChanges();
-    const appDebugElement = fixture.debugElement.query(By.directive(CollapsiblePanelListComponent));
+    const appDebugElement = fixture.debugElement.query(By.directive(ExpandablePanelComponent));
     component = appDebugElement.componentInstance;
     testComponent = appDebugElement.nativeElement;
   });

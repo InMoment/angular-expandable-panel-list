@@ -1,6 +1,6 @@
 export default {
   format: 'es',
-  moduleName: 'angular-collapsible-panel-list',
+  moduleName: 'angular-expandable-panel-list',
   sourceMap: true,
   external: [
     '@angular/core',

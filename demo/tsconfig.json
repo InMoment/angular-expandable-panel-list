@@ -19,7 +19,7 @@
     "types": [ "node" ],
     "typeRoots": [ "../node_modules/@types" ],
     "paths": {
-      "angular-collapsible-panel-list": ["../src/index"]
+      "angular-expandable-panel-list": ["../src/index"]
     }
   },
   "include": [
