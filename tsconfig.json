@@ -8,10 +8,7 @@
     "noEmitOnError": true,
     "outDir": "temp",
     "sourceMap": true,
-    "baseUrl": "./node_modules",
-    "paths": {
-      "@inmoment/component-library": ["../src/index"]
-    }
+    "baseUrl": "./node_modules"
   },
   "include": [
     "src/**/*.ts"

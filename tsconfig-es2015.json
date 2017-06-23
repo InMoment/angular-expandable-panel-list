@@ -20,7 +20,7 @@
   "angularCompilerOptions": {
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
-    "flatModuleOutFile": "accordion.js",
-    "flatModuleId": "accordion"
+    "flatModuleOutFile": "angular-collapsible-panel-list.js",
+    "flatModuleId": "angular-collapsible-panel-list"
   }
 }

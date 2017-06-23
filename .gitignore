@@ -59,5 +59,6 @@ typings/
 
 temp
 dist
+build
 *.ngfactory.ts
 *.ngsummary.json
