@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'accordion',
+    selector: 'collapsible-panel-list',
     template: `
     <div class="accordion-container">
 
     </div>
     `
 })
-export class AccordionComponent {}
+export class CollapsiblePanelListComponent {}

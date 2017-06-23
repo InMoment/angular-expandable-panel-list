@@ -1,14 +1,14 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'accordionItem',
+    selector: 'collapsible-panel',
     template: `
     <div class="accordion-item">
 
     </div>
     `
 })
-export class AccordionItemComponent {
+export class CollapsiblePanelComponent {
 
     @Input() title: string;
 

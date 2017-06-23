@@ -22,7 +22,6 @@ module.exports = function(config) {
       {pattern: 'node_modules/@angular/**/*', included: false, watched: false},
       {pattern: 'node_modules/@angular/**/*.js.map', included: false, watched: true},
       {pattern: 'node_modules/reflect-metadata/Reflect.js', include: true },
-      {pattern: 'karma-test-shim.js', included: true, watched: true},
       // paths loaded via module imports
       {pattern: 'temp/**/*.js', included: false, watched: true},
 

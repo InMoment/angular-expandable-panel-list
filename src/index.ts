@@ -1,1 +1,1 @@
-export * from './accordion/accordion.module';
+export * from './lib/collapsible-panel-list.module';
