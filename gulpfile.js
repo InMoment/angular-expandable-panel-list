@@ -78,6 +78,8 @@ function startKarmaServer(isTddMode, isSaucelabs, done) {
 
 gulp.task('clean:build', function() { return del(['dist/', 'build/']); });
 
+gulp.task('clean:demo', function() { return del(['demo/dist']); });
+
 gulp.task('styles', function() {
   return gulp.src('./src/styles/**/*.scss')
       .pipe(sass().on('error', sass.logError))
@@ -132,6 +134,8 @@ gulp.task('npm', function() {
       .pipe(gulpFile('package.json', JSON.stringify(targetPkgJson, null, 2)))
       .pipe(gulp.dest('dist'));
 });
+
+gulp.task('build:demo',['clean:demo'],shell.task(['webpack --config demo/webpack.config.js --progress --profile --bail'],{env: {MODE:'build'}}));
 
 gulp.task('demo-server', [], shell.task([
   'webpack-dev-server --port 9090 --config demo/webpack.config.js --inline --progress'
