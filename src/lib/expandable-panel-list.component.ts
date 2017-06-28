@@ -19,16 +19,9 @@ export class ExpandablePanelListComponent {
     private open = false;
     private myElement: ElementRef;
 
-    constructor(myElement: ElementRef) {
-        console.log(this._panels);
-    }
-
-    ngOnInit() {
-        console.log(this._panels);
-    }
+    constructor(myElement: ElementRef) {}
 
     ngAfterViewInit() {
-        console.log(this._panels);
         this._panels.forEach(panel => {
             panel.status.subscribe((event: boolean) => {
                 this.open = event;
