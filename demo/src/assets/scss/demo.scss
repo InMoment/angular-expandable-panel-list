@@ -1,1 +1,14 @@
 @import '../../../../src/styles/main.scss';
+@import '../../../../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    margin:0;
+    padding:0;
+}
+main {
+    padding:20px;
+}
+#demo-container {
+    max-width:400px;
+    border:1px solid silver;
+}
