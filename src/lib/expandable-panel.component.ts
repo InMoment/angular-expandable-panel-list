@@ -61,10 +61,10 @@ export class ExpandablePanelComponent {
         this.status.emit(this.open);
     }
 
-    ngAfterViewInit(){        
+    ngAfterViewInit(){
         this.top = this.myElement.nativeElement.offsetTop + 'px';
-        this.height = this.myElement.nativeElement.innerHeight + 'px';
-        this.totalHeight = this.myElement.nativeElement.parentNode.innerHeight + 'px';
+        this.height = this.myElement.nativeElement.clientHeight + 'px';
+        this.totalHeight = this.myElement.nativeElement.parentNode.clientHeight + 'px';
         this.styleHeight = this.height;
         this.styleTop = this.top;
         this.setState(this.open);

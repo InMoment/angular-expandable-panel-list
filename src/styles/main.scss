@@ -1,4 +1,7 @@
 expandable-panel-list {
+    expandable-panel {
+        display:block;
+    }
     .expandable-panel-container {
         display:block;
         position:relative;
@@ -14,6 +17,7 @@ expandable-panel-list {
             display:flex;
             justify-content: stretch;
             flex-direction: column;
+            overflow:hidden;
             .title {
                 padding:5px 10px;
                 flex: 0 0 auto;
@@ -24,7 +28,7 @@ expandable-panel-list {
             .content {
                 padding:0;
                 height:0;
-                overflow:hidden;
+                overflow:auto;
                 padding:0;
                 flex:1 1 auto;
             }
