@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+temp
+dist
+build
+*.ngfactory.ts
+*.ngsummary.json

@@ -1,2 +1,2 @@
-# angular-collapsible-panel-list
-An Angular component for managing collapsible panels within a mobile context.
+# angular-expandable-panel-list
+An Angular component for managing expandable panels within a mobile context.
