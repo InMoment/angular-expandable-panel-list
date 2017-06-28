@@ -6,7 +6,7 @@ import { ExpandablePanelComponent } from './expandable-panel.component';
     selector: 'expandable-list',
     template: `
     <ul class="expandable-list-container">
-        <li *ngFor="let item of items" (click)="selectItem(item)">
+        <li *ngFor="let item of items" (click)="selectItem(item)" md-ripple>
             {{item.title}}
         </li>
     </ul>
@@ -19,8 +19,8 @@ export class ExpandableListComponent {
     @Output() selected = new EventEmitter();
 
     selectItem(item: ExpandablePanelComponent) {
+        item.open = !item.open;
         this.selected.emit(item);
-        console.log(item);
     }
 
 }

@@ -1,4 +1,4 @@
-import { Component, ContentChildren, QueryList } from '@angular/core';
+import { Component, ContentChildren, QueryList, Input } from '@angular/core';
 
 import { ExpandablePanelComponent } from './expandable-panel.component';
 
@@ -12,6 +12,8 @@ import { ExpandablePanelComponent } from './expandable-panel.component';
     `
 })
 export class ExpandablePanelListComponent {
+
+    @Input() changeWidth = 768;
 
     @ContentChildren(ExpandablePanelComponent) _panels: QueryList<ExpandablePanelComponent>;
 
