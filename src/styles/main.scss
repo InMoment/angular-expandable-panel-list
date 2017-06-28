@@ -8,6 +8,7 @@ expandable-panel-list {
         min-height:400px;
         .expandable-panel {
             display:block;
+            width:100%;
             position:static;
             background-color:white;
             z-index:0;
