@@ -1,34 +1,49 @@
 expandable-panel-list {
-    display:block;
-    position:relative;
-    .expandable-list-container {
-        position:absolute;
-        list-style: none;
-        margin:0;
-        padding:0;
-        z-index:1;
-        background-color:white;
-        width:100%;
-        li {
-            padding:0 24px;
-            line-height: 48px;
-            cursor: pointer;
-        }
-    }
-    .expandable-panel {
-        background-color:white;
-        opacity:0;
-        z-index:0;
+    .expandable-panel-container {
+        display:block;
         position:relative;
-        transition: opacity 0.25s step-end, z-index 0.25s step-end;
+        min-height:400px;
+        .expandable-panel {
+            display:block;
+            position:static;
+            background-color:white;
+            z-index:0;
+            transition: top 0.5s ease, height 0.5s ease;
+            height:30px;
+            box-shadow: 0px 0px 0px rgba(0,0,0,0);
+            display:flex;
+            justify-content: stretch;
+            flex-direction: column;
+            .title {
+                padding:5px 10px;
+                flex: 0 0 auto;
+                height:30px;
+                width:100%;
+                cursor:pointer;
+            }
+            .content {
+                padding:5px 10px;
+                height:0;
+                overflow:hidden;
+                padding:0;
+                flex:1 1 auto;
+            }
+            &.open {
+                z-index:1;
+                height:100%;
+                width:100%;
+                box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+                .content {
+                    height:auto;
+                    overflow:auto;
+                    padding:5px 10px;
+                }
+            }
+        }
         &.open {
-            opacity:1;
-            z-index:2;
-            position:absolute;
-            top:0px;
-            height:100%;
-            width:100%;
-            transition: opacity 0.25s step-start, z-index 0.25s step-start;
+            .expandable-panel {
+                position:absolute;
+            }
         }
     }
 }
