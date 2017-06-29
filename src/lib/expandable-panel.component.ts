@@ -12,7 +12,7 @@ import {
     selector: 'expandable-panel',
     template: `
     <div class="expandable-panel" [class.open]="open" [style.top]="styleTop" [style.height]="styleHeight">
-        <div class="title ripple" (click)="toggle()">{{ title }}</div>
+        <div class="title" md-ripple (click)="toggle()">{{ title }}</div>
         <div class="content">
             <ng-content></ng-content>
         </div>
