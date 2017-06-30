@@ -2,7 +2,7 @@
 echo "Starting deployment"
 echo "Target: gh-pages branch"
 
-DIST_DIRECTORY="dist/"
+DIST_DIRECTORY="demo/dist/"
 CURRENT_COMMIT=`git rev-parse HEAD`
 ORIGIN_URL=`git config --get remote.origin.url`
 ORIGIN_URL_WITH_CREDENTIALS=${ORIGIN_URL/\/\/github.com/\/\/$GITHUB_TOKEN@github.com}
@@ -20,8 +20,8 @@ cp -r $DIST_DIRECTORY/* . || exit 1
 cp $DIST_DIRECTORY/.gitignore . || exit 1
 
 echo "Pushing new content to $ORIGIN_URL"
-git config user.name "YOUR-GITHUB-USERNAME-HERE" || exit 1
-git config user.email "YOUR-GITHUB-EMAIL-HERE" || exit 1
+git config user.name ${GITHUB_USERNAME} || exit 1
+git config user.email ${GITHUB_EMAIL} || exit 1
 
 git add -A . || exit 1
 git commit --allow-empty -m "Regenerated static content for $CURRENT_COMMIT" || exit 1
