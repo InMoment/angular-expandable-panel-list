@@ -4,7 +4,8 @@
   "description": "Material Design based Expandable Panel List for Angular",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build | gulp build:demo",
+    "test": "gulp test"
   },
   "author": "Nathaniel Lord",
   "license": "MIT",
