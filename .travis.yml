@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - node
 before_script:
+- npm install -g gulp-cli
 - chmod +x ./deploy-to-gh-pages.sh
 script:
 - npm run build
