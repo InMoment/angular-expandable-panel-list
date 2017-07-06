@@ -112,17 +112,17 @@ gulp.task('npm', function() {
   var targetPkgJson = {};
   var fieldsToCopy = [
     'version', 'description', 'keywords', 'author', 'repository', 'license',
-    'bugs', 'homepage'
+    'bugs', 'homepage', 'publishConfig'
   ];
 
-  targetPkgJson['name'] = 'accordion';
+  targetPkgJson['name'] = '@inmoment/angular-expandable-panel-list';
 
   fieldsToCopy.forEach(function(field) {
     targetPkgJson[field] = pkgJson[field];
   });
 
-  targetPkgJson['module'] = 'accordion.js';
-  targetPkgJson['typings'] = 'accordion.d.ts';
+  targetPkgJson['module'] = 'angular-expandable-panel-list.js';
+  targetPkgJson['typings'] = 'angular-expandable-panel-list.d.ts';
 
   targetPkgJson.peerDependencies = {};
   Object.keys(pkgJson.dependencies).forEach(function(dependency) {
