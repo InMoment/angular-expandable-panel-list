@@ -8,18 +8,20 @@ script:
 env:
   global:
   - secure: FnyCBcHI1ONiNqUJUFlTmXII/ixeoQLdHSm/H2kJsqq3NcV0eHwd7y3UTdoXTWEc6SU0PrK1qASNCo4cWMsJfXa9EbAKDP/yCS/dmgv8bxQ+GxY0/6Ql/KnKJ3GE/VCQc4SOlfiJXDtA4tV9P28rAuAO53ImyEM+DTtztBj7BTB6sIvC5+nD2RLnnIYsQdZhnaKiTk34HZgqWbUwvQ73VSLjMOFTdS/IzmpqbOsk40yjesAphbkmoFKfyaoZ8cJ0T+4lCYJUJ5VnEyyJ7JvO8TAfrVT/mVO5B1ZMEebTu4LxuympowuXTbbXV7ra/A398RkjR7d5JDZOfclmdYd0hStiR208GGin7+ZJVGY6EzmJ6bbEtZ7A/yfsZP5L/fDb8p32kHE1pQ3nbPaU+ub/Ra0UDhblWN76HZyNpfDlSmEaJ0y9POLT/3eg3Y4nlD2RIuPpTcQ92tRiSBgonXkhmCv8XAZQrMa/+cdymBfoLhXmF1KslcpuoCJsDq2Lbrg3ATv7psTpGIJLqQu9Ff6g2CSEzLxTT4knN1t5n0rNL3t5W6hzdHo1PmADYthQYp+50pZCoY5tMfWdy5u8IRf+0NtX574qGMeG+uwvwJFGDeP7+EuvsiEKlbnvJL+qJSiZi5HTqqAqz78IlzNYLKy6FuAIf8Q7S2aJElaSABjiwDU=
+before_deploy:
+  - cd dist
 deploy:
   - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
-    local_dir: ./demo/dist/
+    local_dir: ../demo/dist/
     on:
       branch: master
   - provider: npm
-    skip_cleanup: true
-    email: "nathaniel.lord@gmail.com"
-    local_dir: ./dist/
-    api_key: ""
+    email: nathaniel.lord@gmail.com
+    api_key:
+      secure: XH4nh1eAhH88y7u/ENprKDSX6IRz/+cSC/QLUW2K0OQB9bVht8mWJXHgtxNdXhZSpXMy27XU7tuROMzfaDw1IHVy3HOH6eTzN6Nv66VRt2FZeXQaASQM63HSGcJhrtdGTs78cEIbKwa+5MZKcaKz31aPNm8WX7awkGEVyZyiMyBeLXuL4KQqT0C765EWorbODpP5WruDMw3OLmALBYAhiYpwpN0Eeuxu3nA2tYgxo8FGTIZRCm1hOAjcKhHgLTTxUcWsdvAJdPO57QqZk+GUpn+icFyWBDCmB9TiMdlzCFduroLtjUTQha1ynFM3d0BPpHjHMUtbUjB7CpVZ19Z9FJWpp5hWb0XJPR2W46dcoJoJdnNI3Tt5QGwH14gUvlTpWYy+9miDPXhRrKexShtY7D0sX9aHCnCxEmbJ8Wr5rSktt6ZF1ooOzAv4w2kwymCiiF9zO8CDxD4Ljvvi7RwlG3b+4LiQ7E1BKVLpQo+OjXr9O0wuYMqokV4nIVZDKcpNB6MHZxXfW0b5VkHWu6rhX9gXm7WWEKBSYbLZoIGIe/EVE0I6vvTghygP2RBlmppXRgdarbiKYXhi8poQTS+93tOXNEma2AfWjINQnTfFpf2/nyaFt81AW1U4vTUfwTd2Ql3ZoyxfFm8smrmOGS/WNYQkdEPGiRZ4TpY515yevdg=
     on:
       tags: true
+      repo: InMoment/angular-expandable-panel-list
       branch: master

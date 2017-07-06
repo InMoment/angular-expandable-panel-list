@@ -37,13 +37,13 @@ export class ExpandablePanelComponent {
     @ContentChildren(ExpandablePanelTitleComponent) _title: QueryList<ExpandablePanelTitleComponent>;
 
     public closing = false;
+    public styleHeight: string;
+    public styleTop: string;
 
     private state: string;
     private myElement: ElementRef;
     private top: string;
     private height: string;
-    private styleHeight: string;
-    private styleTop: string;
     private totalHeight: string;
 
     constructor(myElement : ElementRef, private sanitizer: DomSanitizer) {
@@ -62,15 +62,18 @@ export class ExpandablePanelComponent {
     }
 
     ngAfterViewInit(){
-        this.top = this.myElement.nativeElement.offsetTop + 'px';
-        this.height = this.myElement.nativeElement.clientHeight + 'px';
-        this.totalHeight = this.myElement.nativeElement.parentNode.clientHeight + 'px';
-        this.styleHeight = this.height;
-        this.styleTop = this.top;
-        this.setState(this.open);
-        this._title.forEach((item) => {
-            item.clicked.subscribe((clicked: any) => { this.toggle(); });
-        });
+        // Use setTimeout to avoid the ExpressionChangedAfterItHasBeenCheckedError
+        setTimeout(() => {
+            this.top = this.myElement.nativeElement.offsetTop + 'px';
+            this.height = this.myElement.nativeElement.clientHeight + 'px';
+            this.totalHeight = this.myElement.nativeElement.parentNode.clientHeight + 'px';
+            this.styleHeight = this.height;
+            this.styleTop = this.top;
+            this.setState(this.open);
+            this._title.forEach((item) => {
+                item.clicked.subscribe((clicked: any) => { this.toggle(); });
+            });
+        });        
     }
 
     toggle() {
