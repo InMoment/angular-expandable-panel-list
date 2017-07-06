@@ -1,4 +1,4 @@
-import { Component, Input, Output, ElementRef, OnInit, EventEmitter } from '@angular/core';
+import { Component, Input, Output, ElementRef, OnInit, EventEmitter, ContentChildren, QueryList } from '@angular/core';
 import { DomSanitizer  } from '@angular/platform-browser';
 import {
   trigger,
@@ -7,15 +7,13 @@ import {
   animate,
   transition
 } from '@angular/animations';
+import { ExpandablePanelTitleComponent } from './expandable-panel-title.component';
 
 @Component({
     selector: 'expandable-panel',
     template: `
-    <div class="expandable-panel" [class.open]="open" [style.top]="styleTop" [style.height]="styleHeight">
-        <div class="title" md-ripple (click)="toggle()">{{ title }}</div>
-        <div class="content">
-            <ng-content></ng-content>
-        </div>
+    <div class="expandable-panel" [class.open]="open" [class.closing]="closing" [style.top]="styleTop" [style.height]="styleHeight">
+        <ng-content></ng-content>
     </div>
     `,
     animations: [
@@ -32,14 +30,15 @@ import {
 })
 export class ExpandablePanelComponent {
 
-    @Input() title: string;
-
     @Input() open: boolean;
 
     @Output() status = new EventEmitter();
 
-    private state: string;
+    @ContentChildren(ExpandablePanelTitleComponent) _title: QueryList<ExpandablePanelTitleComponent>;
 
+    public closing = false;
+
+    private state: string;
     private myElement: ElementRef;
     private top: string;
     private height: string;
@@ -58,6 +57,7 @@ export class ExpandablePanelComponent {
         } else {
             this.state = 'closed';
         }
+        this.closing=false;
         this.status.emit(this.open);
     }
 
@@ -68,13 +68,17 @@ export class ExpandablePanelComponent {
         this.styleHeight = this.height;
         this.styleTop = this.top;
         this.setState(this.open);
+        this._title.forEach((item) => {
+            item.clicked.subscribe((clicked: any) => { this.toggle(); });
+        });
     }
 
     toggle() {
         if(this.open) {
             this.styleTop = this.top;
             this.styleHeight = this.height;
-            setTimeout(()=>this.setState(false),500);
+            this.closing = true;
+            setTimeout(()=>this.setState(false),400);
         } else {
             this.styleTop = '0';
             this.styleHeight = this.totalHeight;
