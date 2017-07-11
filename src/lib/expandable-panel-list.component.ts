@@ -5,7 +5,7 @@ import { ExpandablePanelComponent } from './expandable-panel.component';
 @Component({
     selector: 'expandable-panel-list',
     template: `
-    <div class="expandable-panel-container" [class.open]="open">
+    <div class="expandable-panel-container" [class.open]="open" [class.mobile]="mobile" (window:resize)="onResize($event)">
         <ng-content></ng-content>
     </div>
     `
@@ -16,7 +16,8 @@ export class ExpandablePanelListComponent {
 
     @ContentChildren(ExpandablePanelComponent) _panels: QueryList<ExpandablePanelComponent>;
 
-    private open = false;
+    public open = false;
+    public mobile = true;
     private myElement: ElementRef;
 
     constructor(myElement: ElementRef) {}
@@ -27,6 +28,19 @@ export class ExpandablePanelListComponent {
                 this.open = event;
             });
         });
+        setTimeout(() => this.checkWidth(window.innerWidth));
+    }
+
+    onResize(event:any) {
+        this.checkWidth(event.target.innerWidth);
+    }
+
+    checkWidth(width:number) {
+        if(width > this.changeWidth) {
+            this.mobile = false;
+        } else {
+            this.mobile = true;
+        }
     }
 
 }
