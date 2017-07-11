@@ -21,6 +21,6 @@
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
     "flatModuleOutFile": "angular-expandable-panel-list.js",
-    "flatModuleId": "angular-expandable-panel-list"
+    "flatModuleId": "@inmoment/angular-expandable-panel-list"
   }
 }
