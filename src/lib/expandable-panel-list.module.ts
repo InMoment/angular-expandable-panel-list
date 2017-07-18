@@ -9,15 +9,17 @@ import { ExpandablePanelListComponent } from './expandable-panel-list.component'
 import { ExpandablePanelComponent } from './expandable-panel.component';
 import { ExpandablePanelTitleComponent } from './expandable-panel-title.component';
 import { ExpandablePanelContentComponent } from './expandable-panel-content.component';
+import { ExpandablePanelExpanderComponent } from './expandable-panel-expander.component';
 
 export { ExpandablePanelListComponent } from './expandable-panel-list.component';
 export { ExpandablePanelComponent } from './expandable-panel.component';
 export { ExpandablePanelTitleComponent } from './expandable-panel-title.component';
 export { ExpandablePanelContentComponent } from './expandable-panel-content.component';
+export { ExpandablePanelExpanderComponent } from './expandable-panel-expander.component';
 
 @NgModule({
     imports: [ MdRippleModule, CommonModule ],
-    declarations: [ ExpandablePanelListComponent, ExpandablePanelComponent, ExpandablePanelTitleComponent, ExpandablePanelContentComponent ],
-    exports: [ ExpandablePanelListComponent, ExpandablePanelComponent, ExpandablePanelTitleComponent, ExpandablePanelContentComponent ]
+    declarations: [ ExpandablePanelListComponent, ExpandablePanelComponent, ExpandablePanelTitleComponent, ExpandablePanelContentComponent, ExpandablePanelExpanderComponent ],
+    exports: [ ExpandablePanelListComponent, ExpandablePanelComponent, ExpandablePanelTitleComponent, ExpandablePanelContentComponent, ExpandablePanelExpanderComponent ]
 })
 export class ExpandablePanelListModule { }
