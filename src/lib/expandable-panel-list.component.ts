@@ -24,8 +24,8 @@ export class ExpandablePanelListComponent {
 
     ngAfterViewInit() {
         this._panels.forEach(panel => {
-            panel.status.subscribe((event: boolean) => {
-                this.open = event;
+            panel.status.subscribe((open: boolean) => {
+                this.open = open;
             });
         });
         setTimeout(() => this.checkWidth(window.innerWidth));

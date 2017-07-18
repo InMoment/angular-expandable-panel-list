@@ -28,3 +28,13 @@ main {
         display:inline;
     }
 }
+@media screen and (min-width:768px) {
+    .close-icon {
+        display:none!important;
+    }
+}
+@media screen and (max-width:769px) {
+    expandable-panel-expander {
+        display:none;
+    }
+}

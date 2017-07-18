@@ -1,6 +1,6 @@
 {
   "name": "angular-expandable-panel-list",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Material Design based Expandable Panel List for Angular",
   "scripts": {
     "build": "gulp build | gulp build:demo",
@@ -16,12 +16,12 @@
     "access": "public"
   },
   "dependencies": {
-    "@angular/animations": "^4.2.3",
-    "@angular/common": "^4.2.4",
-    "@angular/core": "^4.2.4",
-    "@angular/material": "^2.0.0-beta.7",
-    "rxjs": "^5.4.1",
-    "zone.js": "^0.8.12"
+    "@angular/animations": "4.2.3",
+    "@angular/common": "4.2.4",
+    "@angular/core": "4.2.4",
+    "@angular/material": "2.0.0-beta.7",
+    "rxjs": "5.4.1",
+    "zone.js": "0.8.12"
   },
   "devDependencies": {
     "@angular/cdk": "^2.0.0-beta.8",

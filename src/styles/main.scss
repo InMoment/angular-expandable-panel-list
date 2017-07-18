@@ -4,9 +4,19 @@ expandable-panel-list {
 }
 expandable-panel {
     display:block;
+    border-bottom:1px solid #F5F5F5;
 }
 expandable-panel-title {
     display:block;
+    cursor:pointer;
+}
+expandable-panel-expander {
+    display:inline-block;
+    transition: 400ms;
+    position:absolute;
+    right:16px;
+    top:50%;
+    transform:translateY(-50%);
 }
 
 expandable-panel-list {
@@ -54,6 +64,9 @@ expandable-panel-list {
                     height:auto;
                     overflow:auto;
                     margin-bottom:24px;
+                }
+                expandable-panel-expander {
+                    transform:translateY(-50%) rotateZ(179deg);
                 }
                 .content {
                     height:auto;
