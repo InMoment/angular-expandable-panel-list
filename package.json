@@ -1,6 +1,6 @@
 {
   "name": "angular-expandable-panel-list",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Material Design based Expandable Panel List for Angular",
   "scripts": {
     "build": "gulp build | gulp build:demo",
