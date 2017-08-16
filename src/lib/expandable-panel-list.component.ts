@@ -36,10 +36,18 @@ export class ExpandablePanelListComponent {
     }
 
     checkWidth(width:number) {
-        if(width > this.changeWidth) {
+        let changed = false;
+        if(width > this.changeWidth && this.mobile) {
             this.mobile = false;
-        } else {
+            changed = true;
+        } else if(this.mobile === false) {
             this.mobile = true;
+            changed = true;
+        }
+        if(changed) {
+            this._panels.forEach(panel => {
+                panel.mobile = this.mobile;
+            });
         }
     }
 
