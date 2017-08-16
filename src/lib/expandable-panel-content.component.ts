@@ -11,8 +11,15 @@ import { DomSanitizer  } from '@angular/platform-browser';
 })
 export class ExpandablePanelContentComponent {
 
-    constructor() {
+    private myElement: ElementRef;
+    public height: number;
 
+    constructor(myElement : ElementRef) {
+        this.myElement = myElement;
+    }
+
+    ngAfterViewInit(){
+        this.height = this.myElement.nativeElement.querySelector('.content').clientHeight;
     }
 
 }
