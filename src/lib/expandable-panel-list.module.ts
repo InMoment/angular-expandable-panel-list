@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MdRippleModule } from '@angular/material';
+import { MatRippleModule } from '@angular/material';
 
 import { ExpandablePanelListComponent } from './expandable-panel-list.component';
 import { ExpandablePanelComponent } from './expandable-panel.component';
@@ -18,7 +18,7 @@ export { ExpandablePanelContentComponent } from './expandable-panel-content.comp
 export { ExpandablePanelExpanderComponent } from './expandable-panel-expander.component';
 
 @NgModule({
-    imports: [ MdRippleModule, CommonModule ],
+    imports: [ MatRippleModule, CommonModule ],
     declarations: [ ExpandablePanelListComponent, ExpandablePanelComponent, ExpandablePanelTitleComponent, ExpandablePanelContentComponent, ExpandablePanelExpanderComponent ],
     exports: [ ExpandablePanelListComponent, ExpandablePanelComponent, ExpandablePanelTitleComponent, ExpandablePanelContentComponent, ExpandablePanelExpanderComponent ]
 })
