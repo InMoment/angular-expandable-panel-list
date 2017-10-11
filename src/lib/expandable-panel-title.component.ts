@@ -4,7 +4,7 @@ import { DomSanitizer  } from '@angular/platform-browser';
 @Component({
     selector: 'expandable-panel-title',
     template: `
-        <div class="title" md-ripple (click)="handleClick()">
+        <div class="title" mat-ripple (click)="handleClick()">
             <ng-content></ng-content>
         </div>
     `

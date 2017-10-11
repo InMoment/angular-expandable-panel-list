@@ -5,7 +5,7 @@ import { DomSanitizer  } from '@angular/platform-browser';
     selector: 'expandable-panel-expander',
     template: `
         <div #icon><ng-content></ng-content></div>
-        <md-icon *ngIf="icon.children.length == 0">keyboard_arrow_down</md-icon>
+        <mat-icon *ngIf="icon.children.length == 0">keyboard_arrow_down</mat-icon>
     `
 })
 export class ExpandablePanelExpanderComponent {
