@@ -15,6 +15,7 @@ deploy:
     on:
       branch: master
   - provider: npm
+    skip_cleanup: true
     email: nathaniel.lord@gmail.com
     api_key:
       secure: XH4nh1eAhH88y7u/ENprKDSX6IRz/+cSC/QLUW2K0OQB9bVht8mWJXHgtxNdXhZSpXMy27XU7tuROMzfaDw1IHVy3HOH6eTzN6Nv66VRt2FZeXQaASQM63HSGcJhrtdGTs78cEIbKwa+5MZKcaKz31aPNm8WX7awkGEVyZyiMyBeLXuL4KQqT0C765EWorbODpP5WruDMw3OLmALBYAhiYpwpN0Eeuxu3nA2tYgxo8FGTIZRCm1hOAjcKhHgLTTxUcWsdvAJdPO57QqZk+GUpn+icFyWBDCmB9TiMdlzCFduroLtjUTQha1ynFM3d0BPpHjHMUtbUjB7CpVZ19Z9FJWpp5hWb0XJPR2W46dcoJoJdnNI3Tt5QGwH14gUvlTpWYy+9miDPXhRrKexShtY7D0sX9aHCnCxEmbJ8Wr5rSktt6ZF1ooOzAv4w2kwymCiiF9zO8CDxD4Ljvvi7RwlG3b+4LiQ7E1BKVLpQo+OjXr9O0wuYMqokV4nIVZDKcpNB6MHZxXfW0b5VkHWu6rhX9gXm7WWEKBSYbLZoIGIe/EVE0I6vvTghygP2RBlmppXRgdarbiKYXhi8poQTS+93tOXNEma2AfWjINQnTfFpf2/nyaFt81AW1U4vTUfwTd2Ql3ZoyxfFm8smrmOGS/WNYQkdEPGiRZ4TpY515yevdg=
